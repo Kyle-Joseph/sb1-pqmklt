@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">Analytics</div>
+        <nav>
+          <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+          <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+          <a href="#"><i class="fas fa-users"></i> Customers</a>
+          <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+      </aside>
+      
+      <main class="content">
+        <header>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="user">
+            <i class="fas fa-bell"></i>
+            <div class="avatar">JD</div>
+          </div>
+        </header>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-title">Total Revenue</div>
+            <div class="stat-value">$54,375</div>
+            <div class="stat-change positive">+12.5%</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-title">Total Users</div>
+            <div class="stat-value">2,456</div>
+            <div class="stat-change positive">+8.2%</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-title">Active Sessions</div>
+            <div class="stat-value">1,435</div>
+            <div class="stat-change negative">-3.1%</div>
+          </div>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-card main-chart">
+            <h3>Revenue Overview</h3>
+            <canvas id="revenueChart"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>User Distribution</h3>
+            <canvas id="userChart"></canvas>
+          </div>
+        </div>
+
+        <div class="table-section">
+          <h3>Recent Transactions</h3>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Customer</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="transactionsTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
